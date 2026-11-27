@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Price Patrol — Real Black Friday Deals, Checked 27 Nov 2026</title>
+<meta name="description" content="A Black Friday deal finder built from deals checked by hand on 27 November 2026: sale price, usual price, store link and an honest verdict for each one.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <h1><span class="mark">&#9679;</span> Price Patrol</h1>
+  <p>Real Black Friday deals, checked one by one on 27 November 2026. Every deal shows its sale price, its usual price, the store page it was read from, and an honest verdict on whether it is really a deal.</p>
+  <p class="checked-line">Prices checked 27 Nov 2026 &middot; US stores &middot; USD &middot; No sponsored placements</p>
+</header>
+
+<main>
+  <noscript><p class="empty">Price Patrol needs JavaScript to search and filter the deals. The deal list itself lives in <code>app/data.js</code>.</p></noscript>
+  <div class="summary" id="summary" aria-label="Deal summary"></div>
+
+  <section class="controls" aria-label="Search and filter deals">
+    <input type="search" id="search" placeholder="Search deals — try &quot;headphones&quot;, &quot;OLED&quot; or &quot;LEGO&quot;" aria-label="Search deals">
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    <div class="row">
+      <label>Store
+        <select id="store-filter" aria-label="Filter by store">
+          <option value="all">All stores</option>
+        </select>
+      </label>
+      <label>Minimum discount
+        <select id="discount-filter" aria-label="Filter by minimum discount">
+          <option value="0">Any discount</option>
+          <option value="25">25% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sort" aria-label="Sort deals">
+          <option value="discount">Biggest discount</option>
+          <option value="verdict">Best verdict</option>
+          <option value="price-asc">Lowest price</option>
+          <option value="price-desc">Highest price</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <p class="count-line" id="count-line" aria-live="polite"></p>
+
+  <div id="detail-slot"></div>
+
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <p><strong>How the verdicts work.</strong> &ldquo;New low&rdquo; means the lowest price seen for that product this season. &ldquo;Strong price&rdquo; means a large, genuine cut on a current model. &ldquo;Fair deal&rdquo; means a real discount that is not the cheapest anywhere, or a modest cut &mdash; the evidence on each card says which. Where a store&rsquo;s struck-through price looked inflated, the card says so.</p>
+  <p>Prices were read from each store&rsquo;s own page on 27 November 2026 and can change or sell out. Always confirm the price on the store page before buying. Store links go straight to the store; this page carries no tracking or affiliate codes of its own.</p>
+</footer>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
